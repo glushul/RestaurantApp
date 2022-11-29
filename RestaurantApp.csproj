@@ -55,11 +55,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="UI\Pages\DeliveryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\GetContactPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\Pages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\Pages\MenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\AutorizationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -71,11 +83,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="UI\Pages\DeliveryPage.xaml.cs">
+      <DependentUpon>DeliveryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\GetContactPage.xaml.cs">
+      <DependentUpon>GetContactPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\AutorizationWindow.xaml.cs">
+      <DependentUpon>AutorizationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -133,7 +154,16 @@
     <Resource Include="UI\Windows\Images\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="UI\Pages\Images\family.jpg" />
+    <Resource Include="UI\Pages\Images\food.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Pages\Images\broniboy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Pages\Images\yandeks.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Pages\Images\delivery.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

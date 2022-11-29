@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RestaurantApp"
         mc:Ignorable="d"
-        Title="Carlota Young" Height="800" Width="1400" MinWidth="1300" MinHeight="750" MaxHeight="1000" MaxWidth="1600" Icon="Images/icon.png">
+        Title="Carlota Young" Height="800" Width="1400" MinHeight="800" MinWidth="1400" MaxHeight="1000" MaxWidth="1600" Icon="Images/icon.png" WindowStartupLocation="CenterScreen">
     <Grid Background="#FFF1EEEA">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="282"></ColumnDefinition>
@@ -21,12 +21,12 @@
             <Image Source="Images/logo.png" Grid.Row="0" Margin="9" Width="auto" Height="auto"></Image>
             <Grid Grid.Row="1" Background="#FFCDB47F">
                 <Button x:Name="ButtonAboutRestaurant" Content="О ресторане" Height="85" Width="282" VerticalAlignment="Top" Background="#FFCDB47F" BorderThickness="0" Foreground="White" FontSize="25" HorizontalAlignment="Center" Click="ButtonAboutRestaurant_Click"></Button>
-                <Button Content="Фотогалерея" Height="85" Width="282" Background="#FFCDB47F" BorderThickness="0" Foreground="White" FontSize="25" HorizontalAlignment="Center"></Button>
+                <Button Content="Фотогалерея" Height="85" Width="282" Background="#FFCDB47F" BorderThickness="0" Foreground="White" FontSize="25" HorizontalAlignment="Center" Click="Button_Click_2"></Button>
                 <Button x:Name="ButtonMenu" Content="Меню" Height="85" Width="282" VerticalAlignment="Bottom" Background="#FFCDB47F" BorderThickness="0" Foreground="White" FontSize="25" HorizontalAlignment="Center" Click="ButtonMenu_Click"></Button>
             </Grid>
             <Grid Grid.Row="2">
-                <Button Content="ДОСТАВКА" Height="85" VerticalAlignment="Top" Background="#FFF1EEEA" BorderThickness="0" Foreground="#FFCDB47F" FontSize="25" ></Button>
-                <Button Content="КОНТАКТЫ" Height="85" VerticalAlignment="Bottom" Background="#FFF1EEEA" BorderThickness="0" Foreground="#FFCDB47F" FontSize="25"></Button>
+                <Button Content="ДОСТАВКА" Height="85" VerticalAlignment="Top" Background="#FFF1EEEA" BorderThickness="0" Foreground="#FFCDB47F" FontSize="25" Click="Button_Click_1" ></Button>
+                <Button Content="КОНТАКТЫ" Height="85" VerticalAlignment="Bottom" Background="#FFF1EEEA" BorderThickness="0" Foreground="#FFCDB47F" FontSize="25" Click="Button_Click"></Button>
             </Grid>
             <GridSplitter Grid.Row="3" HorizontalAlignment="Stretch" Height="1" VerticalAlignment="Top" Background="#FF707070"/>
             <Grid Grid.Row="3">
@@ -36,7 +36,7 @@
                     <RowDefinition Height="31*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <TextBlock Text="КРАСНОДАР" Grid.Row="0" Margin="60, 0, 0, 0" FontSize="18" HorizontalAlignment="Left" Width="104" VerticalAlignment="Bottom" Height="24"></TextBlock>
-                <TextBlock Text="УЛ.КРАСНАЯ 126" Grid.Row="1" Margin="60, 0, 0, 0" FontSize="18" HorizontalAlignment="Left" Grid.RowSpan="2" Width="139"></TextBlock>
+                <TextBlock Text="УЛ.КРАСНАЯ 126" Grid.Row="1" Margin="60, 0, 0, 0" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Stretch" Grid.RowSpan="2" Width="139"></TextBlock>
                 <TextBlock Text="+79180264474" Grid.Row="2" FontSize="25" HorizontalAlignment="Left" Margin="60,0,0,0" Foreground="#FF707070" VerticalAlignment="Top" Height="33" Width="165"></TextBlock>
             </Grid>
         </Grid>
@@ -48,11 +48,11 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="48*"></ColumnDefinition>
-                    <ColumnDefinition Width="137*"/>
+                    <ColumnDefinition Width="185*"></ColumnDefinition>
                     <ColumnDefinition Width="185*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="2" Width="320" Background="#FFCDB47F" Foreground="White" FontSize="25" Content="КОРЗИНА" HorizontalAlignment="Right" Margin="0,30 , 70, 30" BorderBrush="#FF766747" BorderThickness="2"></Button>
+                <TextBlock x:Name="userTextBox" FontSize="22" HorizontalAlignment="Left" Margin="60,0,0,0" Foreground="#FF707070" Text="user: " TextDecorations="Underline"></TextBlock>
+                <Button Grid.Column="1" Width="320" Background="#FFCDB47F" Foreground="White" FontSize="25" Content="КОРЗИНА" HorizontalAlignment="Right" Margin="0,30 , 70, 30" BorderBrush="#FF766747" BorderThickness="2" Click="Button_Click_3"></Button>
             </Grid>
             <GridSplitter Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="#FF707070" Height="1"></GridSplitter>
             <Frame Grid.Row="1" x:Name="mainFrame" NavigationUIVisibility="Hidden"></Frame>

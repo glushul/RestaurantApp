@@ -20,10 +20,11 @@ namespace RestaurantApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(string user)
         {
             InitializeComponent();
             mainFrame.Content = new UI.Pages.MenuPage();
+            userTextBox.Text += user;
         }
 
         private void ButtonMenu_Click(object sender, RoutedEventArgs e)
@@ -34,6 +35,26 @@ namespace RestaurantApp
         private void ButtonAboutRestaurant_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Content = new UI.Pages.MainPage();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = new UI.Pages.GetContactPage();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = new UI.Pages.DeliveryPage();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Страница в стадии разработки", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Страница в стадии разработки", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

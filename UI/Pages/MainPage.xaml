@@ -6,19 +6,24 @@
       xmlns:local="clr-namespace:RestaurantApp.UI.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="690" d:DesignWidth="1118" FontFamily="Segoe UI">
-
+    
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="90"></RowDefinition>
-            <RowDefinition Height="170"></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" FontStyle="Italic">Семья Холл</TextBlock>
-        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" TextAlignment="Center" LineHeight="32">Семья Холл открыла двери ресторана Carlota Young в 2009 году, но стремление к исключительному гостеприимству началось задолго до этого.<LineBreak/>
-            Билл Холл провел более сорока лет своей карьеры, управляя отелями и ресторанами вместе со своей женой Джин. <LineBreak/>
-            После того, как их дочь Стейси поступила в Чарльстонский колледж, мистер и миссис Холл решили открыть собственный ресторан. <LineBreak/>
-            Сегодня у Carlota Young есть три родственных отеля с таким же названием в Гринвилле, Колумбия, Саммервилле, а вскоре и в Нэшвилле.<LineBreak/>
-            Семья Холл также владеет и управляет Slightly North of Broad, High Cotton, Rita’s Seaside Grille и Halls Signature Events.</TextBlock>
-        <Image Grid.Row="2" Source="Images/family.jpg" Margin="40" Width="auto" Height="auto"></Image>
-    </Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="618"></ColumnDefinition>
+            <ColumnDefinition Width="500*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" VerticalAlignment="Bottom" FontSize="20" TextAlignment="Center" LineHeight="32">
+            Ресторан Carlota Young вот уже 15 лет радует своих посетителей <LineBreak/>самыми вкусными блюдами в городе.
+            </TextBlock>
+            <TextBlock Grid.Row="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" LineHeight="32" FontWeight="Bold" FontStyle="Italic">
+            Приходите и попробуйте сами!
+            </TextBlock>
+        </Grid>
+        <Image Grid.Column="1" Source="Images/food.jpg" Height="Auto" Width="Auto" Margin="15"></Image>
+    </Grid>       
 </Page>
