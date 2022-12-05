@@ -6,24 +6,20 @@
       xmlns:local="clr-namespace:RestaurantApp.UI.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="690" d:DesignWidth="1118" FontFamily="Segoe UI">
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="618"></ColumnDefinition>
-            <ColumnDefinition Width="500*"></ColumnDefinition>
+            <ColumnDefinition Width="700"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" VerticalAlignment="Bottom" FontSize="20" TextAlignment="Center" LineHeight="32">
-            Ресторан Carlota Young вот уже 15 лет радует своих посетителей <LineBreak/>самыми вкусными блюдами в городе.
+        <StackPanel Grid.Column="0" VerticalAlignment="Center">
+            <TextBlock VerticalAlignment="Center" FontSize="20" TextAlignment="Center" LineHeight="32">
+                Ресторан Carlota Young вот уже 15 лет радует своих посетителей <LineBreak/>самыми вкусными блюдами в городе.
             </TextBlock>
-            <TextBlock Grid.Row="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" LineHeight="32" FontWeight="Bold" FontStyle="Italic">
-            Приходите и попробуйте сами!
+            <TextBlock VerticalAlignment="Center" FontSize="30" TextAlignment="Center" LineHeight="32" FontWeight="Bold" FontStyle="Italic">
+                Приходите и попробуйте сами!
             </TextBlock>
-        </Grid>
-        <Image Grid.Column="1" Source="Images/food.jpg" Height="Auto" Width="Auto" Margin="15"></Image>
+        </StackPanel>
+        <Image Source="Images/food.jpg" Height="Auto" Width="Auto" Margin="15" Grid.Column="1"></Image>
     </Grid>       
 </Page>

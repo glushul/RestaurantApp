@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantApp.UI.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,41 +21,51 @@ namespace RestaurantApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        string user = "";
         public MainWindow(string user)
         {
             InitializeComponent();
+            // Во фрейме показывает страницу меню
             mainFrame.Content = new UI.Pages.MenuPage();
-            userTextBox.Text += user;
+            this.user = user;
+            // Добавляет к кнопке логин
+            accountButton.Content += user;
         }
 
-        private void ButtonMenu_Click(object sender, RoutedEventArgs e)
+        private void menuButton_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Content = new UI.Pages.MenuPage();
         }
 
-        private void ButtonAboutRestaurant_Click(object sender, RoutedEventArgs e)
+        private void aboutRestaurantButton_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Content = new UI.Pages.MainPage();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void getContactButton_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Content = new UI.Pages.GetContactPage();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void deliveryButton_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Content = new UI.Pages.DeliveryPage();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void photoGalleryButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Страница в стадии разработки", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void basketButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Страница в стадии разработки", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void accountButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserWindow userWindow = new UserWindow(user);
+            userWindow.Show();
         }
     }
 }

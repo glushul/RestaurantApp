@@ -24,5 +24,13 @@ namespace RestaurantApp.UI.Pages
         {
             InitializeComponent();
         }
+
+        private void ButtonSend_Click(object sender, RoutedEventArgs e)
+        {
+            // Очищает все текстбоксы
+            TextBoxEmail.Text = "";
+            TextBoxName.Text = "";
+            TextBoxPhone.Text = "";
+        }
     }
 }

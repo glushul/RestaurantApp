@@ -26,22 +26,42 @@ namespace RestaurantApp.UI.Windows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(loginTextBox.Text == "admin" && passwordPasswordBox.Password == "admin")
+            string password = "";
+            if (passwordCheckBox.IsChecked == true)
+                password = passwordTextBox.Text;
+            if (passwordCheckBox.IsChecked == false)
+                password = passwordPasswordBox.Password;
+            // Проверка введеных логина и пароля
+            if (loginTextBox.Text == "admin" && password == "admin")
             {
                 this.Hide();
                 MainWindow mainWindow = new MainWindow("admin");
                 mainWindow.Show();
             }
-            else if (loginTextBox.Text == "client" && passwordPasswordBox.Password == "client")
+            else if (loginTextBox.Text == "manager" && password == "manager")
             {
                 this.Hide();
-                MainWindow mainWindow = new MainWindow("client");
+                MainWindow mainWindow = new MainWindow("manager");
                 mainWindow.Show();
             }
             else
             {
                 MessageBox.Show("Пароль и логин введены неправильно!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void passwordCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            passwordTextBox.Visibility = Visibility.Hidden;
+            passwordPasswordBox.Password = passwordTextBox.Text;
+            passwordPasswordBox.Visibility = Visibility.Visible;
+        }
+
+        private void passwordCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            passwordPasswordBox.Visibility = Visibility.Hidden;
+            passwordTextBox.Text = passwordPasswordBox.Password;
+            passwordTextBox.Visibility = Visibility.Visible;
         }
     }
 }

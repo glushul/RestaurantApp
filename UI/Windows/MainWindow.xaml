@@ -20,13 +20,22 @@
             </Grid.RowDefinitions>
             <Image Source="Images/logo.png" Grid.Row="0" Margin="9" Width="auto" Height="auto"></Image>
             <Grid Grid.Row="1" Background="#FFCDB47F">
-                <Button x:Name="ButtonAboutRestaurant" Content="О ресторане" Height="85" Width="282" VerticalAlignment="Top" Background="#FFCDB47F" Foreground="White" Click="ButtonAboutRestaurant_Click"></Button>
-                <Button Content="Фотогалерея" Height="85" Width="282" Background="#FFCDB47F" Foreground="White" Click="Button_Click_2"></Button>
-                <Button x:Name="ButtonMenu" Content="Меню" Height="85" Width="282" VerticalAlignment="Bottom" Background="#FFCDB47F" Foreground="White" Click="ButtonMenu_Click"></Button>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" x:Name="aboutRestaurantButton" Content="О ресторане" Background="#FFCDB47F" Foreground="White" Width="282" Click="aboutRestaurantButton_Click"></Button>
+                <Button Grid.Row="1" x:Name="photoGalleryButton" Content="Фотогалерея" Background="#FFCDB47F" Foreground="White" Width="282" Click="photoGalleryButton_Click"></Button>
+                <Button Grid.Row="2" x:Name="menuButton" Content="Меню" Background="#FFCDB47F" Foreground="White" Width="282" Click="menuButton_Click"></Button>
             </Grid>
             <Grid Grid.Row="2">
-                <Button Content="ДОСТАВКА" Height="85" VerticalAlignment="Top" Background="#FFF1EEEA" Foreground="#FFCDB47F" FontSize="25" Click="Button_Click_1" ></Button>
-                <Button Content="КОНТАКТЫ" Height="85" VerticalAlignment="Bottom" Background="#FFF1EEEA" Foreground="#FFCDB47F" FontSize="25" Click="Button_Click"></Button>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button x:Name="deliveryButton" Grid.Row="0" Content="ДОСТАВКА" Background="#FFF1EEEA" Foreground="#FFCDB47F" FontSize="25" Width="282" Click="deliveryButton_Click" ></Button>
+                <Button x:Name="getContactButton" Grid.Row="1" Content="КОНТАКТЫ" Background="#FFF1EEEA" Foreground="#FFCDB47F" FontSize="25" Width="282" Click="getContactButton_Click"></Button>
             </Grid>
             <GridSplitter Grid.Row="3" HorizontalAlignment="Stretch" Height="1" VerticalAlignment="Top" Background="#FF707070"/>
             <Grid Grid.Row="3">
@@ -51,8 +60,8 @@
                     <ColumnDefinition Width="185*"></ColumnDefinition>
                     <ColumnDefinition Width="185*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBlock x:Name="userTextBox" FontSize="22" HorizontalAlignment="Left" Foreground="#FF707070" Text="user: " TextDecorations="Underline" Margin="60, 0, 0, 0"></TextBlock>
-                <Button Grid.Column="1" Width="320" Background="#FFCDB47F" Foreground="White" FontSize="25" Content="КОРЗИНА" HorizontalAlignment="Right" Margin="0,30 , 70, 30" Click="Button_Click_3"></Button>
+                <Button x:Name="accountButton" Grid.Column="0" Width="320" Background="#FFF1EEEA" Foreground="#FFCDB47F" FontSize="25" Content="login: " HorizontalAlignment="Left" Margin="70, 30 , 70, 30" Click="accountButton_Click"></Button>
+                <Button x:Name="basketButton" Grid.Column="1" Width="320" Background="#FFCDB47F" Foreground="White" FontSize="25" Content="КОРЗИНА" HorizontalAlignment="Right" Margin="0, 30 , 70, 30" Click="basketButton_Click"></Button>
             </Grid>
             <GridSplitter Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="#FF707070" Height="1"></GridSplitter>
             <Frame Grid.Row="1" x:Name="mainFrame" NavigationUIVisibility="Hidden"></Frame>
